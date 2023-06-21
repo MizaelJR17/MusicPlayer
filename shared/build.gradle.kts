@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.resolve.calls.model.ResolvedCallArgument.DefaultArgument.arguments
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.google.gms.google-services")
 }
 
 kotlin {
@@ -59,4 +62,8 @@ android {
         minSdk = 26
         targetSdk = 33
     }
+
+}
+dependencies {
+    implementation("com.google.firebase:firebase-analytics-ktx:21.2.2")
 }
